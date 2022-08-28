@@ -1,3 +1,4 @@
+
 module.exports = {
     mode: 'jit',
     purge: ['./src/**/*.js', './public/index.html'],
@@ -8,7 +9,13 @@ module.exports = {
             serif: ['"Roboto Slab"', 'serif'],
             body: ['Roboto', 'sans-serif'],
         },
-        extend: {},
+     
+        extend: { 
+            backgroundImage: {
+                'hero-pattern': "url('/assets/img/bng.PNG')",
+              } 
+
+        }, 
     },
     variants: {
         extend: {},

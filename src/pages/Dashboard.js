@@ -1,34 +1,65 @@
 
-       import React from "react";
-       import { useUserContext } from "../context/userContext";   
+       import React from "react"; 
        import { NavLink } from 'react-router-dom';
+       import styled from "styled-components";
+       import Sidebar from "components/Sidebar";
+      //  import welcomeone from "../assets/img/welcome.PNG"; 
+      //  import welcometwo from "../assets/img/secondwelcome.PNG";
+      import "../components/br.css"
+
+   
 
        
 
 export default function Dashboard() {  
-      
-    const { user } = useUserContext(); 
+       
+   
 
     return (   
         <>
-            <div className="ml-10">
-            <h2>Name : {user.displayName}</h2>  
-             <h2>Email : {user.email} </h2> 
-            </div>
-                 
+        <Sidebar />  
+
+        <div className="bg-white py-5">  
+
+        <div class="max-w-7xl ml-7 heropattern py-11 px-3 mr-7  grid grid-cols-12 ">
+              <div class="col-span-12 mt-0.4   md:col-span-12 object-fill lg:col-span-6">
+
+              {/* <img width={700} src={welcomeone} alt="welcome" /> */}
+                
+              <FlexColumn>
+                <FlexRow>
+                  <Text10>Welcome Back</Text10>
+                  <Text20>🚀</Text20>
+                </FlexRow>
+                <Text30>Ayomide <br className="responsivemodal"></br> Akinyemi</Text30>
+              </FlexColumn>  
 
 
+              </div>
 
-           <div className="flex flex-col mx-10 my-4 lg:flex-row  ">
-                    <div>
-                       <p className="bg-gray-200 py-3 px-3 not-italic font-normal text-sm text-gray-900">
+              <div class="col-span-12 pb-0.5   md:col-span-12 object-fill lg:col-span-6 "> 
+              {/* <img width={500} src={welcometwo} alt="welcome" /> */}
+
+              <Paragraph>
+            Develop a passion for learning. If you do, you will never cease to grow.
+            – <Text40>Anthony J. D’Angelo</Text40>  
+          </Paragraph>
+
+              </div>
+              </div>
+
+
+           <div className="flex flex-col mx-10 my-4 lg:flex-row bg-red-50"> 
+                    <div> 
+                       <p className=" py-3 px-3 not-italic font-normal   text-sm text-gray-900">
                         Got Any Registration issues? can't find a course? Need unblocking for reselection? course form amendment issue? etc. <br></br>
                         The Registration Officer is there for you. 
                         <br></br> 
-                        Your department Registration Officer is 
-                        <span className="not-italic  ml-2 font-normal text-lg text-gray-900">Engr.B.A.Iyamolere</span>
-                       </p>
+                        Your department Registration Officer is  
+                        <span className="not-italic  ml-2 font-bold text-lg text-purple-900">Engr.B.A.Iyamolere</span> 
+                       </p> 
                     </div>
+
 
                     <div className="ml-10">
                     <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,139 +83,259 @@ export default function Dashboard() {
                 <path d="M11.6044 18.9635C12.5075 18.9635 13.2396 18.2314 13.2396 17.3283C13.2396 16.4252 12.5075 15.6931 11.6044 15.6931C10.7013 15.6931 9.96924 16.4252 9.96924 17.3283C9.96924 18.2314 10.7013 18.9635 11.6044 18.9635Z" fill="white"/>
                 <path d="M18.1459 18.963C19.049 18.963 19.7811 18.2309 19.7811 17.3278C19.7811 16.4247 19.049 15.6926 18.1459 15.6926C17.2428 15.6926 16.5107 16.4247 16.5107 17.3278C16.5107 18.2309 17.2428 18.963 18.1459 18.963Z" fill="white"/>
                 <path d="M24.6869 18.963C25.59 18.963 26.3221 18.2309 26.3221 17.3278C26.3221 16.4247 25.59 15.6926 24.6869 15.6926C23.7839 15.6926 23.0518 16.4247 23.0518 17.3278C23.0518 18.2309 23.7839 18.963 24.6869 18.963Z" fill="white"/>
-                </svg> 
+                </svg>  
 
                     </div>
 
            </div>
+
            
            <h1 className="text-left mx-7 text-indigo-900 font-black text-lg">Quick Access</h1>     
 
            <div className="mx-7 my-4 ">
             <div className="container  mx-auto mb-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6
-                    
-                    bg-gray-200">  
-                        <span>
-                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M27.5045 0C12.3382 0 0 12.3382 0 27.5045C0 42.6708 12.3382 55.2247 27.5045 55.2247C42.6708 55.2247 55.2247 42.6708 55.2247 27.5045C55.2247 12.3382 42.6708 0 27.5045 0ZM39.0456 35.5941C36.859 35.5941 34.9305 34.4981 33.7586 32.8333C32.2752 34.5123 30.1313 35.5941 27.7202 35.5941C23.2599 35.5941 19.6307 31.9649 19.6307 27.5045C19.6307 23.0441 23.2599 19.4149 27.7202 19.4149C29.5483 19.4149 31.2177 20.0475 32.574 21.0742V21.0329C32.574 20.1386 33.2976 19.4149 34.1919 19.4149C35.0862 19.4149 35.8098 20.1386 35.8098 21.0329C35.8098 24.6311 35.8098 25.5226 35.8098 29.1224C35.8098 30.9062 37.2618 32.3582 39.0456 32.3582C40.8294 32.3582 42.2814 30.9062 42.2814 29.1224C42.2814 18.2942 35.116 12.9433 27.7202 12.9433C19.6907 12.9433 13.159 19.475 13.159 27.5045C13.159 35.534 19.6907 42.0657 27.7202 42.0657C30.9561 42.0657 34.0165 41.0293 36.5714 39.0669C38.278 37.7641 40.2322 40.3358 38.5432 41.6328C35.4164 44.0328 31.6749 45.3015 27.7202 45.3015C17.9069 45.3015 9.92319 37.3178 9.92319 27.5045C9.92319 17.6912 17.9069 9.70747 27.7202 9.70747C36.6616 9.70747 45.5173 16.3015 45.5173 29.1224C45.5173 32.6916 42.6148 35.5941 39.0456 35.5941Z" fill="#DF8A09"/>
-                     
-                      </svg> 
-                      <p className="text-black text-base  mx-auto my-3"> Email </p>         
-                        </span> 
-                    
-                    </div>
+                    <div className="flex justify-center text-6xl border-2   p-6 bg-gray-100   ">  
+
+                      <WhiteFlexColumnRoot>
+                         <Image1 src={`https://file.rendit.io/n/U94vpn9K2cugiCpBJ4sa.svg`} />
+                      <Text1>Email</Text1>
+                      </WhiteFlexColumnRoot>
+                  
+                    </div> 
 
 
 
-                    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-200">
-                        <span>
-                        <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg"> 
-                           <path d="M0 37.6068C0 38.5003 0.724393 39.2247 1.61791 39.2247H53.6068C54.5003 39.2247 55.2247 38.5003 55.2247 37.6068V0.394775H0V37.6068ZM43.7915 5.24851H47.1352C48.0287 5.24851 48.7531 5.97291 48.7531 6.86642C48.7531 7.75994 48.0287 8.48434 47.1352 8.48434H43.7915C42.898 8.48434 42.1736 7.75994 42.1736 6.86642C42.1736 5.97291 42.898 5.24851 43.7915 5.24851ZM43.7915 11.7202H47.1352C48.0287 11.7202 48.7531 12.4446 48.7531 13.3381C48.7531 14.2316 48.0287 14.956 47.1352 14.956H43.7915C42.898 14.956 42.1736 14.2316 42.1736 13.3381C42.1736 12.4446 42.898 11.7202 43.7915 11.7202ZM43.7915 18.1918H47.1352C48.0287 18.1918 48.7531 18.9162 48.7531 19.8097C48.7531 20.7032 48.0287 21.4276 47.1352 21.4276H43.7915C42.898 21.4276 42.1736 20.7032 42.1736 19.8097C42.1736 18.9162 42.898 18.1918 43.7915 18.1918ZM43.7915 24.6635H47.1352C48.0287 24.6635 48.7531 25.3879 48.7531 26.2814C48.7531 27.1749 48.0287 27.8993 47.1352 27.8993H43.7915C42.898 27.8993 42.1736 27.1749 42.1736 26.2814C42.1736 25.3879 42.898 24.6635 43.7915 24.6635ZM43.7915 31.1351H47.1352C48.0287 31.1351 48.7531 31.8595 48.7531 32.753C48.7531 33.6465 48.0287 34.3709 47.1352 34.3709H43.7915C42.898 34.3709 42.1736 33.6465 42.1736 32.753C42.1736 31.8595 42.898 31.1351 43.7915 31.1351ZM17.9049 5.24851H37.3189C38.2124 5.24851 38.9368 5.97291 38.9368 6.86642C38.9368 7.75994 38.2124 8.48434 37.3189 8.48434H17.9049C17.0114 8.48434 16.287 7.75994 16.287 6.86642C16.287 5.97291 17.0114 5.24851 17.9049 5.24851ZM17.9049 11.7202H37.3189C38.2124 11.7202 38.9368 12.4446 38.9368 13.3381C38.9368 14.2316 38.2124 14.956 37.3189 14.956H17.9049C17.0114 14.956 16.287 14.2316 16.287 13.3381C16.287 12.4446 17.0114 11.7202 17.9049 11.7202ZM17.9049 18.1918H37.3189C38.2124 18.1918 38.9368 18.9162 38.9368 19.8097C38.9368 20.7032 38.2124 21.4276 37.3189 21.4276H17.9049C17.0114 21.4276 16.287 20.7032 16.287 19.8097C16.287 18.9162 17.0114 18.1918 17.9049 18.1918ZM17.9049 24.6635H37.3189C38.2124 24.6635 38.9368 25.3879 38.9368 26.2814C38.9368 27.1749 38.2124 27.8993 37.3189 27.8993H17.9049C17.0114 27.8993 16.287 27.1749 16.287 26.2814C16.287 25.3879 17.0114 24.6635 17.9049 24.6635ZM17.9049 31.1351H37.3189C38.2124 31.1351 38.9368 31.8595 38.9368 32.753C38.9368 33.6465 38.2124 34.3709 37.3189 34.3709H17.9049C17.0114 34.3709 16.287 33.6465 16.287 32.753C16.287 31.8595 17.0114 31.1351 17.9049 31.1351ZM8.08956 5.24851H11.4332C12.3268 5.24851 13.0512 5.97291 13.0512 6.86642C13.0512 7.75994 12.3268 8.48434 11.4332 8.48434H8.08956C7.19604 8.48434 6.47165 7.75994 6.47165 6.86642C6.47165 5.97291 7.19604 5.24851 8.08956 5.24851ZM8.08956 11.7202H11.4332C12.3268 11.7202 13.0512 12.4446 13.0512 13.3381C13.0512 14.2316 12.3268 14.956 11.4332 14.956H8.08956C7.19604 14.956 6.47165 14.2316 6.47165 13.3381C6.47165 12.4446 7.19604 11.7202 8.08956 11.7202ZM8.08956 18.1918H11.4332C12.3268 18.1918 13.0512 18.9162 13.0512 19.8097C13.0512 20.7032 12.3268 21.4276 11.4332 21.4276H8.08956C7.19604 21.4276 6.47165 20.7032 6.47165 19.8097C6.47165 18.9162 7.19604 18.1918 8.08956 18.1918ZM8.08956 24.6635H11.4332C12.3268 24.6635 13.0512 25.3879 13.0512 26.2814C13.0512 27.1749 12.3268 27.8993 11.4332 27.8993H8.08956C7.19604 27.8993 6.47165 27.1749 6.47165 26.2814C6.47165 25.3879 7.19604 24.6635 8.08956 24.6635ZM8.08956 31.1351H11.4332C12.3268 31.1351 13.0512 31.8595 13.0512 32.753C13.0512 33.6465 12.3268 34.3709 11.4332 34.3709H8.08956C7.19604 34.3709 6.47165 33.6465 6.47165 32.753C6.47165 31.8595 7.19604 31.1351 8.08956 31.1351Z" fill="#2D0353"/>
-                         </svg> 
-                         <p className="text-black text-base  mx-auto my-3">Timetable</p>  
-                        </span>
-                    </div>
-                    <div className="flex flex-col justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-200">
-                        <span className="flex flex-row mx-auto"> 
-                        <svg width="13" height="33" viewBox="0 0 13 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.831055 0.449463H12.2644V32.2337H0.831055V0.449463Z" fill="#2D0353"/>
-                        </svg>
-                        <svg width="13" height="33" viewBox="0 0 13 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.831055 0.449463H12.2644V32.2337H0.831055V0.449463Z" fill="#2D0353"/>
-                        </svg>
-                        <svg width="13" height="33" viewBox="0 0 13 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.831055 0.449463H12.2644V32.2337H0.831055V0.449463Z" fill="#2D0353"/>
-                        </svg> 
+                    <div className="flex justify-center text-6xl border-2 bg-gray-100  p-6 ">
+                    <NavLink to="/coursetimetable"> 
+                    <WhiteFlexColumnRoot1>
+                      <Image2 src={`https://file.rendit.io/n/vPTNTi23BI7Weyw3AYfj.svg`} />
+                      <Text2>Time Table</Text2>  
+                    </WhiteFlexColumnRoot1>
+                    </NavLink>  
+                      
+                    </div> 
 
-                        </span>
-                        <p className="text-black text-lg ml-6 mx-auto my-3">Library</p>  
+                    <div className="flex  justify-center text-6xl border-2 bg-gray-100 p-6 ">
+                        
+                        
+                        <WhiteFlexColumnRoot1> 
+                       <Image2 src={'https://file.rendit.io/n/9dZKME3XfMkXzoPkFzaf.svg'} />
+                        <Text2>Library</Text2>
+                        </WhiteFlexColumnRoot1>      
+                        
+       
                         </div>
                             
 
-                    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-200">
-                        <span>
+                    <div className="flex justify-center text-6xl border-2 bg-gray-100   p-6 ">
 
-                        <svg width="56" height="53" viewBox="0 0 56 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <path d="M41.3646 27.5045C38.1208 27.5045 35.1339 28.6253 32.7698 30.4994L24.6735 22.5403C24.6966 22.5115 24.7204 22.4835 24.7433 22.4545C26.3037 20.4769 27.3238 18.0741 27.6259 15.4779H38.4104C39.1679 19.3855 42.6135 22.3455 46.7393 22.3455C51.4183 22.3455 55.2247 18.5391 55.2247 13.8601C55.2247 9.18111 51.4183 5.3747 46.7393 5.3747C42.6136 5.3747 39.1681 8.33462 38.4105 12.2421H27.6253C26.8212 5.35885 20.9548 0 13.8601 0C6.2171 0 0 6.2171 0 13.8601C0 18.3266 2.12162 22.3811 5.51708 24.9374V22.9593C5.51708 19.9046 7.16843 17.2297 9.62334 15.7757C8.91362 14.8654 8.48865 13.7221 8.48865 12.4806C8.48865 9.51872 10.8983 7.11018 13.8601 7.11018C16.822 7.11018 19.2305 9.51872 19.2305 12.4806C19.2305 13.7221 18.8066 14.8654 18.0969 15.7757C20.0071 16.9072 21.4309 18.7786 21.968 20.9929C22.2554 22.1767 22.2021 22.8608 22.2021 24.9385L30.4678 32.809C28.9272 34.7668 27.9029 37.1484 27.5994 39.7468H16.8142C16.0567 35.8392 12.6111 32.8792 8.4853 32.8792C3.80641 32.8792 0 36.6856 0 41.3646C0 46.0436 3.80641 49.85 8.48541 49.85C12.611 49.85 16.0565 46.8901 16.8142 42.9826H27.5986C28.0429 46.8005 30.0414 50.1993 33.0227 52.443V50.4638C33.0227 47.4091 34.6729 44.7342 37.1278 43.2802C36.4181 42.3699 35.9942 41.2266 35.9942 39.9851C35.9942 37.0243 38.4028 34.6147 41.3646 34.6147C44.3265 34.6147 46.7361 37.0243 46.7361 39.9851C46.7361 41.2266 46.3111 42.3699 45.6014 43.2802C48.0563 44.7342 49.7077 47.4091 49.7077 50.4638V52.4419C53.1031 49.8856 55.2247 45.8311 55.2247 41.3646C55.2247 33.7227 49.0076 27.5045 41.3646 27.5045Z" fill="#2D0353"/>
-                  </svg> 
-                                 
-                  <p className="text-black text-base  my-3">Social Media</p> 
-                        </span>
-                    </div>
+                    <NavLink to="/social-media"> 
+                    <WhiteFlexColumnRoot1>
+                        <Image2 src={`https://file.rendit.io/n/5Czvsb1XIcPU9znDOlUB.svg`} />
+                        <Text2>Social Media</Text2>
+                        </WhiteFlexColumnRoot1>   
+                        </NavLink> 
+
+                    </div> 
 
                 </div>
                   </div> 
                    
                    <div className="container mx-auto mb-4"> 
                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                           <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-200"> 
-                               <span>
-                               <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M51.6143 13.3815H42.0562V1.91168C42.0562 0.85587 41.2003 0 40.1445 0H1.91168C0.85587 0 0 0.85587 0 1.91168V45.8794C0 50.1025 3.42348 53.526 7.6466 53.526H45.8794C50.1025 53.526 53.526 50.1025 53.526 45.8794V15.2931C53.526 14.2374 52.6701 13.3815 51.6143 13.3815ZM15.2931 9.55817H26.7629C27.8188 9.55817 28.6746 10.414 28.6746 11.4699C28.6746 12.5257 27.8188 13.3815 26.7629 13.3815H15.2931C14.2373 13.3815 13.3814 12.5257 13.3814 11.4699C13.3814 10.414 14.2374 9.55817 15.2931 9.55817ZM32.4979 45.8794H9.55817C8.50236 45.8794 7.64649 45.0235 7.64649 43.9677C7.64649 42.9119 8.50236 42.056 9.55817 42.056H32.4979C33.5537 42.056 34.4096 42.9119 34.4096 43.9677C34.4096 45.0235 33.5537 45.8794 32.4979 45.8794ZM32.4979 38.2328H9.55817C8.50236 38.2328 7.64649 37.3769 7.64649 36.3211C7.64649 35.2653 8.50236 34.4094 9.55817 34.4094H32.4979C33.5537 34.4094 34.4096 35.2653 34.4096 36.3211C34.4096 37.3769 33.5537 38.2328 32.4979 38.2328ZM32.4979 30.5863H9.55817C8.50236 30.5863 7.64649 29.7304 7.64649 28.6746C7.64649 27.6188 8.50236 26.7629 9.55817 26.7629H32.4979C33.5537 26.7629 34.4096 27.6188 34.4096 28.6746C34.4096 29.7304 33.5537 30.5863 32.4979 30.5863ZM32.4979 22.9397H9.55817C8.50236 22.9397 7.64649 22.0838 7.64649 21.028C7.64649 19.9722 8.50236 19.1163 9.55817 19.1163H32.4979C33.5537 19.1163 34.4096 19.9722 34.4096 21.028C34.4096 22.0838 33.5537 22.9397 32.4979 22.9397ZM49.7026 45.8794C49.7026 47.9909 47.9909 49.7026 45.8794 49.7026C43.7679 49.7026 42.0562 47.9909 42.0562 45.8794V17.2048H49.7028V45.8794H49.7026Z" fill="#2D0353"/>
-                             </svg> 
-
-                             <p className="text-black text-base  my-3">News</p> 
-       
-                               </span>
+                           <div className="flex justify-center text-6xl border-2 -300 bg-gray-100  p-6 ">
+                            
+                           <WhiteFlexColumnRoot1>
+                      <Image2 src={`https://file.rendit.io/n/XrMCEQFfNfjPjtACrJP3.svg`} />
+                      <Text2>News</Text2> 
+                        </WhiteFlexColumnRoot1>  
                            
                            </div>
                             
                                  
-                                 <NavLink to="/Maps">
-                           <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-200">
-                               <span>
-                               <svg width="25" height="32" viewBox="0 0 25 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <path d="M12.0804 0C5.41893 0 0 5.41893 0 12.0804C0 18.2794 9.69194 29.2588 10.7964 30.491C11.1243 30.8534 11.5903 31.0639 12.0804 31.0639C12.5705 31.0639 13.0365 30.8534 13.3644 30.491C14.4689 29.2588 24.1608 18.2794 24.1608 12.0804C24.1608 5.41893 18.7419 0 12.0804 0ZM12.0804 17.2577C9.22253 17.2577 6.90309 14.9383 6.90309 12.0804C6.90309 9.22253 9.22253 6.90309 12.0804 6.90309C14.9383 6.90309 17.2577 9.22253 17.2577 12.0804C17.2577 14.9383 14.9383 17.2577 12.0804 17.2577Z" fill="#2D0353"/>
-                                  </svg> 
-
-                                  <p className="text-black text-base  my-3"> Maps</p>  
-       
-                               </span>
+                                
+                           <div className="flex justify-center text-6xl border-2  bg-gray-100 p-6 ">
+                           <NavLink to="/studentunionaffairs"> 
+                           <WhiteFlexColumnRoot1>
+                            <Image2 src={`https://file.rendit.io/n/hhb74kb3ZYAINssOSGLv.svg`} />
+                            <Text2>Student Union</Text2>
+                            </WhiteFlexColumnRoot1>   
+                            </NavLink>
                            </div>
-                           </NavLink>
+                         
 
 
 
-                           <div className="flex flex-row justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-200">
-                               <span>
-                   <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.6755 18.2608C17.711 19.3611 19.2641 19.4904 20.5585 18.7785C22.0767 17.4123 25.0248 16.287 27.6126 16.287C29.5218 16.287 31.3339 16.7722 32.9193 17.6136C32.9193 17.1879 33.4828 15.5614 34.699 14.3454C35.4756 13.6012 36.4139 13.0512 37.4494 12.7598C35.9992 11.8097 34.3903 11.0671 32.6795 10.5607C33.546 9.45983 34.0842 7.98116 34.0842 6.47165C34.0842 2.89736 31.1868 0 27.6126 0C24.0384 0 21.1409 2.89736 21.1409 6.47165C21.1409 7.98235 21.6799 9.46198 22.5475 10.5632C20.3343 11.2365 18.5391 12.0982 16.8048 13.6011C15.3561 14.9241 15.4773 17.0626 16.6755 18.2608V18.2608Z" fill="#2D0353"/>
-             <path d="M10.5632 32.6775C11.3513 35.2676 12.3316 36.9554 13.6011 38.42C14.9298 39.8751 17.0694 39.7406 18.2607 38.5495C19.361 37.514 19.4903 35.9607 18.7786 34.6665C17.2766 32.9976 16.287 29.9616 16.287 27.677C16.4011 26.7868 16.1957 24.9561 17.6136 22.338C16.7611 22.0533 15.7055 21.8862 14.3456 20.526C13.6012 19.7494 13.0512 18.8109 12.7598 17.7754C11.8097 19.2256 11.0673 20.8344 10.5609 22.5454C9.46004 21.679 8.08924 21.1408 6.57951 21.1408C3.00533 21.1408 0 24.0381 0 27.6124C0 31.1866 3.00533 34.0841 6.57951 34.0841C8.09021 34.0841 9.46198 33.5451 10.5632 32.6775V32.6775Z" fill="#2D0353"/>
-            <path d="M32.6768 44.6612C35.4402 43.8204 37.0992 42.7671 38.4196 41.6231C39.8718 40.2972 39.7432 38.1577 38.5489 36.9637C37.481 35.8634 35.8955 35.7341 34.6011 36.4782C32.7643 37.6341 31.1987 38.9374 27.6765 38.9374C25.7521 38.9374 23.9547 38.4859 22.3049 37.6106C22.3049 38.036 21.7415 39.6627 20.5252 40.8788C19.7486 41.6229 18.8104 42.1733 17.7749 42.4644C19.2251 43.4145 20.8342 44.1571 22.5449 44.6635C21.6784 45.7644 21.1402 47.1352 21.1402 48.6449C21.1402 52.2191 24.0376 55.2244 27.6118 55.2244C31.186 55.2244 34.0835 52.2191 34.0835 48.6449C34.0835 47.1342 33.5445 45.7624 32.6768 44.6612V44.6612Z" fill="#2D0353"/>
-              <path d="M48.6453 21.1409C47.1346 21.1409 45.7629 21.6799 44.6616 22.5475C44.0237 20.4505 43.0644 18.4676 41.6237 16.8048C40.2971 15.352 38.1581 15.4814 36.9641 16.6755C35.8638 17.7109 35.7345 19.2641 36.4463 20.5585C37.9495 22.2279 38.9379 25.2834 38.9379 27.5477V27.6126C38.9379 29.5216 38.4524 31.3014 37.5789 32.887C38.8085 33.1457 39.9734 33.7605 40.8793 34.699C41.6237 35.4756 42.1738 36.4139 42.4651 37.4494C43.4153 35.9992 44.1577 34.3901 44.6641 32.6793C45.7648 33.546 47.1356 34.0842 48.6453 34.0842C52.2195 34.0842 55.2248 31.1868 55.2248 27.6126C55.2248 24.0383 52.2195 21.1409 48.6453 21.1409Z" fill="#2D0353"/>
-                    </svg>
+                           <div className="flex flex-row justify-center text-6xl border-2 bg-gray-100   p-6 ">
+                           <NavLink to="/maps"> 
+                           <WhiteFlexColumnRoot1>
+                    <Image2 src={`https://file.rendit.io/n/X89tQZt5pZ1g6k8dmuch.svg`} />
+                    <Text2>Campus Map</Text2>
+                    </WhiteFlexColumnRoot1> 
+                    </NavLink> 
 
-                    <p className="text-black text-base  my-3">Social Icon</p>         
-                               </span>
+
                                </div>
        
        
-                           <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-200"> 
-                               <span>
-       
-                               <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M27 0C12.1116 0 0 12.1116 0 27C0 41.8884 12.1116 54 27 54C41.8884 54 54 41.8884 54 27C54 12.1116 41.8884 0 27 0ZM27 42.7499C25.7579 42.7499 24.7501 41.7421 24.7501 40.5C24.7501 39.2579 25.7579 38.2501 27 38.2501C28.2421 38.2501 29.2499 39.2579 29.2499 40.5C29.2499 41.7421 28.2421 42.7499 27 42.7499ZM30.5616 28.4444C29.7653 28.8111 29.2499 29.6145 29.2499 30.4899V31.5001C29.2499 32.7419 28.2442 33.75 27 33.75C25.7558 33.75 24.7501 32.7419 24.7501 31.5001V30.4899C24.7501 27.8639 26.2934 25.4567 28.6764 24.3563C30.9691 23.3012 32.6249 20.4997 32.6249 19.1249C32.6249 16.0247 30.1027 13.5 27 13.5C23.8973 13.5 21.3751 16.0247 21.3751 19.1249C21.3751 20.367 20.3691 21.3751 19.1249 21.3751C17.8807 21.3751 16.875 20.367 16.875 19.1249C16.875 13.5428 21.4176 8.99986 27 8.99986C32.5824 8.99986 37.125 13.5428 37.125 19.1249C37.125 22.1649 34.4879 26.6333 30.5616 28.4444Z" fill="#2D0353"/>
-                                      </svg> 
-
-                                      <p className="text-black text-base  my-3">Help</p>  
-                               </span>
+                           <div className="flex justify-center text-6xl border-2 bg-gray-100 p-6 "> 
+                           <NavLink to="/help"> 
+                           <WhiteFlexColumnRoot1>
+                    <Image2 src={`https://file.rendit.io/n/2ktOqIlFZT1TwEQCnevV.svg`} />
+                    <Text2>Help</Text2>
+                    </WhiteFlexColumnRoot1>    
+                    </NavLink> 
                            </div>
-       
+                            
                        </div>
                          </div>
-
                          </div>  
-       
-              
-           
 
-        
+                         <div>
 
-       
-            
-            
+                         </div>
+                         </div> 
+                  
         </>
     );
 }
+
+const sizes = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+export const devices = {
+  mobileS: `(min-width: ${sizes.mobileS})`,
+  mobileM: `(min-width: ${sizes.mobileM})`,
+  mobileL: `(max-width: ${sizes.mobileL})`,
+  tablet: `(max-width: ${sizes.tablet})`,
+  laptop: `(min-width: ${sizes.laptop})`,
+  laptopL: `(min-width: ${sizes.laptopL})`,
+  desktop: `(min-width: ${sizes.desktop})`,
+};
+
+const WhiteFlexColumnRoot = styled.div`
+  
+  border-style: solid;
+  height: 170px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 26.78px;
+  align-items: center;
+  border-radius: 6px;
+  padding: 34px 96.78px 34px 97px;
+  border-width: 1px; 
+`;
+const Image1 = styled.img`
+ 
+  width: 55.22px;
+  height: 55.22px;
+`;
+const Text1 = styled.div`
+  text-align: center;
+  font-size: 18px;
+  font-family: Roboto;
+  line-height: 27.09px;
+  color: #df8909;
+`;
+
+const WhiteFlexColumnRoot1 = styled.div`
+
+  border-style: solid;
+  height: 170px;
+  color: #fafafa; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 26.78px;
+  align-items: center;
+  border-radius: 6px;
+  padding: 34px 96.78px 34px 97px;
+
+  margin-left: 10px;  
+  margin-right: 10px;  
+`;
+const Image2 = styled.img`
+
+width: 55.22px;
+height: 55.22px;
+`;
+const Text2 = styled.div`
+white-space: nowrap;
+display: inline-block;
+text-align: left;
+font-size: 18px;
+font-family: Roboto;
+line-height: 27.09px;
+color: #2d0353; 
+`;
+
+
+
+
+const FlexColumn = styled.div`
+  align-self: stretch;
+  width: 318px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+`;
+const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 6px;
+  min-width: 318px;
+  align-items: center;
+`;
+const Text10 = styled.div`
+  mix-blend-mode: normal;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #ffffff;
+`;
+const Text20 = styled.div`
+  mix-blend-mode: normal;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+`;
+const Text30 = styled.div`
+  mix-blend-mode: normal;
+  font-size: 36px;
+  font-family: Product Sans Black;
+  line-height: 34.92px;
+  color: #ffffff;
+
+  @media ${devices.mobileL} { 
+    margin-right: 100px; 
+  } 
+`;
+const Paragraph = styled.div`
+  mix-blend-mode: normal;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #ffffff;
+  margin: 3px 0px 0px 0px;
+  white-space: pre-wrap;
+  
+`;
+const Text40 = styled.div`
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #f2994a;
+  display: contents;
+`;
