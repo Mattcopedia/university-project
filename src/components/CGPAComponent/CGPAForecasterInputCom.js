@@ -9,14 +9,14 @@ const CGPAForecasterInputCom = () => {
     <>
     <div className='bg-white pb-11'>
 
-      <div className='bg-gray-100 mx-4 '>
+      <div className='bg-gray-100 mx-4  '>
 
     <div>
     <div class="bg-gray-100 my-4">
    <div class="max-w-7xl mx-auto grid grid-cols-12 bg-gray-100">
-     <div class="col-span-4">
+     <div class="col-span-4 ">
      <Text1>S/N</Text1>
-     <p className='pl-3 pt-8 md:pt-4'>1</p> 
+     <p className='pl-3 pt-7 md:pt-3'>1</p> 
             
         </div>
      <div class="col-span-4 bg-gray-100"> 
@@ -25,14 +25,14 @@ const CGPAForecasterInputCom = () => {
         </div>
 
      <div class="col-span-4">
-     <Text1> Course unit</Text1>
+     <Text2> Course unit</Text2> 
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className="reducesize pl-2 py-2">
+   <select > 
     <option selected>22 </option> 
     <option>2</option>
     <option>3</option>
-    <option>4</option>
+    <option>4</option> 
     <option>5</option>  
    </select> 
 
@@ -55,7 +55,7 @@ const CGPAForecasterInputCom = () => {
    <div class="max-w-7xl mx-auto grid grid-cols-12 bg-gray-100">
      <div class="col-span-4">
      
-           <p className='pl-3 pt-8 md:pt-4'>2</p>
+           <p className='pl-3 pt-7 md:pt-3'>2</p>
         </div>
      <div class="col-span-4 bg-gray-100"> 
     
@@ -65,8 +65,8 @@ const CGPAForecasterInputCom = () => {
      <div class="col-span-4">
  
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className="reducesize pl-2 py-2">
+   <select >
     <option selected>24</option> 
     <option>2</option>
     <option>3</option>
@@ -86,7 +86,7 @@ const CGPAForecasterInputCom = () => {
    <div class="max-w-7xl mx-auto grid grid-cols-12 bg-gray-100">
      <div class="col-span-4">
     
-            <p className='pl-3 pt-8 md:pt-4'>3</p>
+            <p className='pl-3 pt-7 md:pt-3'>3</p>
         </div>
      <div class="col-span-4 bg-gray-100"> 
    
@@ -96,8 +96,8 @@ const CGPAForecasterInputCom = () => {
      <div class="col-span-4">
      
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize pl-2 py-2">
+   <select className='' >
     <option selected>22 </option> 
     <option>2</option>
     <option>3</option>
@@ -128,7 +128,7 @@ const CGPAForecasterInputCom = () => {
      <div class="col-span-4">
      
 
-     <WhiteText>3.45</WhiteText>
+     <Input type="text" placeholder="3.5" />
 
         </div>
    </div>
@@ -152,22 +152,12 @@ const CGPAForecasterInputCom = () => {
      <div class="col-span-4">
      
 
-     <WhiteText>89</WhiteText>
+     <Input type="text" placeholder="89" /> 
 
         </div>
-   </div>
+   </div> 
   </div>
     </div>
-
-
-
-
-   
-
-   
-
-    
-
     
     <div class='justify'> 
      <RectangleRoot>
@@ -199,7 +189,7 @@ const sizes = {
   export const devices = {
     mobileS: `(min-width: ${sizes.mobileS})`,
     mobileM: `(min-width: ${sizes.mobileM})`,
-    mobileL: `(min-width: ${sizes.mobileL})`,
+    mobileL: `(max-width: ${sizes.mobileL})`,
     tablet: `(max-width: ${sizes.tablet})`,
     laptop: `(min-width: ${sizes.laptop})`,
     laptopL: `(min-width: ${sizes.laptopL})`,
@@ -218,10 +208,15 @@ const sizes = {
   @media ${devices.tablet} {
     padding-bottom: 50px;    
   } 
+
+  @media ${devices.mobileL} { 
+    padding-top: 8px;
+  } 
+
 `;
 
 
-const WhiteText = styled.div`
+const Input = styled.input`
   mix-blend-mode: normal;
   display: flex;
   font-size: 14px;
@@ -242,10 +237,20 @@ const WhiteText = styled.div`
   margin-left: 10px;
   text-align: center; 
 
+  ::placeholder {
+    color: grey;
+  }
+
+
   @media ${devices.tablet} {
     width: 120px;    
   } 
 
+  @media ${devices.mobileL} {
+    width: 60px;    
+  } 
+
+ 
 `;
 
 const Text1 = styled.div`
@@ -256,8 +261,33 @@ const Text1 = styled.div`
   color: #787878;
   margin: 0px 250px 0px 0px;
   margin-left: 8px;
+  padding-bottom: 0px;  
+
+
+  @media ${devices.mobileL} {
+    padding-bottom: 20px;    
+  } 
+
+  @media ${devices.tablet} {
+    padding-bottom: 20px;    
+  } 
+
   
 `;
+
+const Text2 = styled.div`
+  mix-blend-mode: normal;
+  font-size: 18px;
+  font-family: Product Sans Medium;
+  line-height: 21.21px;
+  color: #787878;
+  margin: 0px 250px 0px 0px;
+  margin-left: 8px;
+    
+  
+`;
+
+
 
 const RectangleRoot = styled.div`
   border-top-left-radius: 6px;

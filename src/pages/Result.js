@@ -1,10 +1,11 @@
-import Sidebar from "components/Sidebar";
+
+import SearchYear from "components/ResultsComponents/SearchYear"; 
 
 
 export default function Dashboard() {
     return (
-        <>
-           <Sidebar />
+        <>      
+           <SearchYear />
         </> 
     ); 
 }

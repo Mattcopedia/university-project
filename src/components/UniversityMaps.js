@@ -1,23 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-import Sidebar from './Sidebar';
 
+
+import Maps from './Maps';
+import MapSidebar from './MapSidebar';
+ 
 const UniversityMaps = () => {
   return (
-    <>
-    <Sidebar />
+    <> 
+    <MapSidebar /> 
+   
+
+  
     <div className='pl-5 pb-7'>
-    <UniversityMapRoot>University Map</UniversityMapRoot>
+    <UniversityMapRoot>University Map
+      
+      </UniversityMapRoot> 
     </div>
-    
+    <Maps /> 
+     
+   
 
-    <div className='ml-5 pb-5 bg-white'>
-        
-        <RectangleRoot src={`https://file.rendit.io/n/eAtRhQSZFdlUVR1Dueni.png`} />
-
-    </div>
-
-    <div className='pl-5 pb-7'>
+    <div className='pl-5 pt-5 pb-7'>
     <UniversityMapRoot>Key</UniversityMapRoot>
     </div>
 
@@ -76,10 +80,7 @@ const sizes = {
   };
 
 
-const RectangleRoot = styled.img`
-  width: 937px;
-  height: 525px;
-`;
+
 
 const UniversityMapRoot = styled.div`
   font-size: 18px;

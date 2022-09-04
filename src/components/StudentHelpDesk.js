@@ -1,145 +1,200 @@
-import React from "react";
+import React, {useRef} from "react";
 import styled from "styled-components";
 import "./br.css" 
 
 import ticket from "../assets/img/submit a ticket.PNG";
 import Sidebar from "./Sidebar";
+import img1 from "../assets/img/help3n.png";
+import img2 from "../assets/img/student.PNG";  
 
 
 export default function StudentHelpDesk() {
+
+  const focusDiv = useRef();
+
+    
+  if(focusDiv.current) {
+    focusDiv.current.focus(); 
+  }
+ 
+
   return (
     <>
     <Sidebar />
+    <section class=" mb-4 body-font overflow-hidden"> 
+  <div class="container  ">
+    <div class="flex flex-wrap ">
+      <div class=" md:w-1/2 flex flex-col pb-2 -m-5 items-start">
+        <div class="flex items-center flex-wrap  w-full">
+
+        <img width={660} height={1000} src={img2} alt="help desk" />
+
+         {/* -m-7 */}
+
+        </div>
+      </div>
+
+      <div class="md:w-1/2 flex flex-col items-start ">
+        <div class="flex items-center flex-wrap w-full">
+         
+         
+         <img width={1000} height={700} src={img1} alt="help desk" />
+        
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
     <StudentRoot>
+
       <div>
         <FlexColumn>
-          <div className="flex flex-col mx-10 my-4 lg:flex-row ">
-            <WhiteFlexRow1>
-              <Text13>Student Help Desk</Text13>
-
-              <div className="flex justify-center">
-                <Image17
-                  src={`https://file.rendit.io/n/qOFJUe66MwYQtuqP4kCq.svg`}
-                />
-              </div>
-            </WhiteFlexRow1>
-          </div>
 
           <div>
             <Paragraph>
-              PLEASE FOLLOW THIS REGISTRATION STEPS FOR THE CURRENT SEMESTER
+              PLEASE FOLLOW THIS REGISTRATION STEPS <br className="responsivehelp"></br>  FOR THE CURRENT SEMESTER
             </Paragraph>
           </div>
 
-          <div>
-            <FlexRow10 margin={`0px 0px 16px 63px`}>
-              <Image18
+          <div> 
+                
+                <FlexRow10 >
+                  <div>
+             <Text17>  <Image18
                 src={`https://file.rendit.io/n/m93ncopMt4NJttz1VKUu.svg`}
-              />
+              /> STEP 1</Text17>
+              </div> 
+
               <FlexColumn1 gap={`5px`}>
-                <Text14>STEP 1</Text14>
-                <Paragraph1 width={`984px`}> 
-                  REMITA: approach any of the Banks for school fees,mention <br className="responsive"></br>  you
-                  want to pay your school fees (exclusive bank charges) <br className="responsive"></br>  on 
-                  REMITA Make sure the payer name is in same order as your <br className="responsive"></br> 
-                  fullname on simportal. This step will grant access to your
-                  course <br className="responsive"></br> registration .You may now proceed to course <br className="responsive"></br> 
+                
+                <Paragraph1 > 
+                  REMITA: approach any of the Banks for  school <br className="responsivehelp"></br> fees,mention   you
+                  want to pay your school fees <br className="responsivehelp"></br> (exclusive bank charges)   on 
+                  REMITA Make sure <br className="responsivehelp"></br> the payer name is in same order as your  
+                  fullname <br className="responsivehelp"></br> on simportal. This step will grant access to your <br className="responsivehelp"></br> 
+                  course  registration .You may now proceed to <br className="responsivehelp"></br>  course  
                   registration.
                 </Paragraph1>
-
               </FlexColumn1>
             </FlexRow10>
-            <FlexRow10 margin={`0px 0px 16px 63px`}>
-              <Image18
+
+
+
+            <FlexRow10 >
+                  <div>
+             <Text17>  <Image18
                 src={`https://file.rendit.io/n/m93ncopMt4NJttz1VKUu.svg`}
-              />
+              /> STEP 2</Text17>
+              </div>
               <FlexColumn1 gap={`5px`}>
-              <Text17>STEP 2</Text17>
-                <Paragraph1 width={`984px`}>
-                  Click on SELECTED COURSE via which you will select the course <br className="responsive"></br>
-                  you are taking for the semester, then click on Transfer to
-                  course <br className="responsive"></br> form button at the end of the list 
+                
+                <Paragraph1 >
+                  Click on SELECTED COURSE via which you will  <br className="responsivehelp"></br> select the course 
+                  you are taking for the semester, <br className="responsivehelp"></br> then click on Transfer to
+                  course form button at  <br className="responsivehelp"></br> the end of the list 
                 </Paragraph1>
               </FlexColumn1>
             </FlexRow10>
-            <FlexRow10 margin={`0px 0px 16px 63px`}>
-              <Image18
+
+
+            <FlexRow10 >
+                  <div>
+             <Text17>  <Image18
                 src={`https://file.rendit.io/n/m93ncopMt4NJttz1VKUu.svg`}
-              />
+              /> STEP 3</Text17>
+              </div>
+
               <FlexColumn1 gap={`5px`}>
-              <Text17>STEP 3</Text17>
-                <Paragraph1 width={`984px`}>
-                  Click on course form to
-                  {"  "}
-                  view your earlier selected course:<br className="responsive"></br>Preview for repetitions.
-                  When satisfied with your selection, <br className="responsive"></br> click on the FINAL SUBMIT
+                
+                <Paragraph1 >
+                  Click on course form to view your earlier selected  <br className="responsivehelp"></br> course:Preview for repetitions.
+                  When satisfied  <br className="responsivehelp"></br> with your selection,click on the FINAL SUBMIT  <br className="responsivehelp"></br>
                   button to submit your course form
                 </Paragraph1>
               </FlexColumn1>
             </FlexRow10>
 
-            <FlexRow10 margin={`0px 0px 80px 63px`}>
-              <Image18
+            <FlexRow10 >
+                  <div>
+             <Text17>  <Image18
                 src={`https://file.rendit.io/n/m93ncopMt4NJttz1VKUu.svg`}
-              />
+              /> STEP 4</Text17>
+              </div>
+
               <FlexColumn1 gap={`5px`}>
-                <Text17>STEP 4</Text17>
-                <Paragraph1 width={`984px`}>
-                  Click on PRINT COURSEFORM on the menu to print a copy, <br className="responsive"></br> of
-                  course form (of click on the
-                  {"  "}
-                  pdf version to gat a copy).
-                </Paragraph1>
+                <Paragraph2 >
+                Click on PRINT COURSEFORM on the menu to  <br className="responsivehelp"></br> print a copy of the
+                  course form <br className="responsivehelp"></br> (or click on the pdf version to gat a copy).
+                </Paragraph2>
               </FlexColumn1>
             </FlexRow10>
+            
+          
+
+            
           </div>
 
           <FlexRow14>
-            <div className="">
-              <FlexColumn1 gap={`22px`}>
-                <img
-                  width={400}
-                  height={400}
-                  src={ticket}
-                  alt="Submit a ticket"
-                />
-              </FlexColumn1>
-              <Text18>Submit a ticket</Text18>  
-
-              <form className="form">                
-           
-
-              <label htmlFor="name" className="fullname">Fullname</label> 
-              <input id="name" type="text" />
-
-              <div className="info"> 
-              <div>
-              <label htmlFor="email" className="email">Email</label> 
-              <input id="email" type="email" /> 
-              </div>
-
-              <div>
-              <label htmlFor="Phone number" className="PhoneNumber">Phone number</label> 
-              <input id="Phone number" type="text" /> 
-              </div>
-              </div>
-                
-               <label className="message" htmlFor="Message" >Message</label> 
-               <textarea id="message" name="message" rows="4" cols="50">
-                  
-                </textarea> 
-
-              </form> 
-
-            
-
-                
-
-            </div>
           </FlexRow14>
         </FlexColumn>
       </div>
     </StudentRoot>
+
+    <div class="grid grid-cols-12 py-4 mx-4 ">
+       <div class=" flex justify-center col-span-12 md:col-span-12 lg:col-span-6 pb-3"> 
+        
+        <img
+                  width={400}
+                  height={400}
+                  src={ticket}
+                  alt="Submit a ticket"
+                /> 
+       
+       </div>
+
+       <div class=" col-span-12 md:col-span-6 lg:col-span-6 flex justify-center">   
+            
+       
+          <form className="bg-gray-100 px-7 pt-5">
+         
+          <Paragraphticket>
+              Submit a Ticket
+            </Paragraphticket>
+          <Texto>Full name</Texto>
+          <Input ref={focusDiv} type="text"   /> 
+
+
+          <div className="flex flex-col lg:flex-row">
+            
+            <div>
+            <Texto>Email</Texto>
+          <Inputemail ref={focusDiv} type="text"  /> 
+            </div>
+            <div>
+           
+            <Textn>Phone number</Textn> 
+          <Inputpn ref={focusDiv} type="text"  /> 
+            </div>
+          </div>
+
+          <Texto>Message</Texto>
+          <div>  
+            <Textarea ref={focusDiv}  rows="4" cols="47"  id="message"/>  
+            </div>
+
+              <div className ='flex justify-end'> 
+              <RectangleRoot>
+      <Text1> <button> Submit </button> </Text1> 
+         </RectangleRoot>
+          </div>
+
+          </form>
+       </div>  
+     
+    </div> 
     </>
   );
 }
@@ -161,59 +216,218 @@ export const devices = {
   laptopL: `(max-width: ${sizes.laptopL})`,
   desktop: `(max-width: ${sizes.desktop})`,
 };
+const RectangleRoot = styled.div`
+  width: 156px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  border-radius: 6px;
+  background-color: #2d0353;
+`;
+const Text1 = styled.div`
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  white-space: nowrap;
+`;
+const Textarea = styled.textarea`
+  border-style: solid;
+  border-color: #b3b1b1;
+  width: 420px;
+
+  mix-blend-mode: normal;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border-width: 0.5px; 
+  margin-bottom: 20px;
+
+  :focus {
+    padding-left: 10px;
+  } 
+
+    @media ${devices.tablet} {
+      width: 280px;
+    }
+
+@media ${devices.mobileL} {
+      width: 280px;
+    }
+`;
+
+
+const Input = styled.input.attrs({ type: 'text'})`
+  border-style: solid;
+  border-color: #b3b1b1;
+  width: 420px;
+  height: 44px; 
+  mix-blend-mode: normal;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border-width: 0.5px; 
+  margin-bottom: 20px;
+
+  :focus {
+    padding-left: 10px;
+  } 
+
+    @media ${devices.tablet} {
+      width: 280px;
+    }
+
+@media ${devices.mobileL} {
+      width: 280px;
+    }
+`;
+
+
+
+
+const Inputemail = styled.input`
+  border-style: solid;
+  border-color: #b3b1b1;
+  width: 250px;
+  height: 44px;
+  mix-blend-mode: normal;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border-width: 0.5px; 
+  margin-bottom: 20px;
+
+  :focus {
+    padding-left: 10px;
+  } 
+
+    @media ${devices.tablet} {
+      width: 280px;
+    }
+`;
+
+const Inputpn = styled.input`
+  border-style: solid;
+  border-color: #b3b1b1;
+  width: 150px;
+  height: 44px;
+  mix-blend-mode: normal;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border-width: 0.5px; 
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+  :focus {
+    padding-left: 10px;
+  }  
+
+    @media ${devices.tablet} {
+      width: 280px;
+      margin-left: 2px;
+    }
+`; 
+
+const Texto = styled.div`
+  mix-blend-mode: normal;
+  font-size: 21px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #505050;
+  align-self: flex-start;
+  padding-bottom: 10px;
+`;
+
+const Textn = styled.div`
+  mix-blend-mode: normal;
+  font-size: 21px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #505050;
+  align-self: flex-start;
+  padding-bottom: 10px;
+  padding-left: 20px; 
+
+  @media ${devices.tablet} {
+     padding-left: 0px; 
+    }
+`;
+
+
  
 
 
 const FlexRow10 = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 30px;
+  flex-direction: column;
+ 
   justify-content: center;
-  align-items: center;
-  margin: ${(props) => props.margin};
+ 
+  margin: 0px 0px 20px 63px; 
+
+  @media ${devices.tablet} {
+    margin: 0px 0px 20px 12px; 
+  }
+
 `;
 const Image18 = styled.img`
   width: 16px;
   height: 16px;
-  align-self: flex-start;
-  margin: 3px 0px 0px 0px;
+ 
 `;
 const FlexColumn1 = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   @media ${devices.tablet} {
     display: flex;
     flex-direction: column;
+    justify-content: start;
   }
 
   gap: ${(props) => props.gap};
 `;
 const Paragraph1 = styled.div`
-  font-size: 14px;
+  font-size:14px;
   font-family: Roboto;
-  line-height: 21px;
+  line-height: 21px; 
+  text-align: left; 
+  
+
   width: ${(props) => props.width};
   @media ${devices.tablet} {
-    word-break: break-all;
-    font-size: 14px;
+    font-size: 12px;
+  }
+  display: inline-block; 
+`;
+
+const Paragraph2 = styled.div`
+  font-size:14px;
+  font-family: Roboto;
+  line-height: 21px; 
+  text-align: left; 
+  padding-lefi:0px;
+  padding-right:0px; 
+  width: ${(props) => props.width};
+  @media ${devices.tablet} {
+    font-size: 12px;
   }
   display: inline-block; 
 `;
  
 
 const StudentRoot = styled.div`
-  width: 1100px;
+ 
   background-color: #ffffff;
   display: flex;
   overflow: hidden;
-  flex-direction: row;
-  justify-content: center;
-  padding: 10px;
+  flex-direction: row; 
+  justify-content: center; 
+
+
 `;
 const FlexColumn = styled.div`
-  width: 1202px;
+  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -221,64 +435,44 @@ const FlexColumn = styled.div`
   align-items: flex-start;
 `;
 
-const WhiteFlexRow1 = styled.div`
-  background-color: #fafafa;
-  //   display: flex;
-  //   flex-direction: row;
-  //   gap: 425px;
-  //   align-items: center;
-  border-radius: 6px;
-  padding: 25px 60.31px 24.72px 74px;
-  margin: 0px 0px 59px 59px;
-
-  //   @media ${devices.mobileL} {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
-
-  //   @media ${devices.tablet} {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
-`;
-const Text13 = styled.div`
-  font-size: 36px;
-  font-family: Product Sans Black;
-  line-height: 34.92px;
-  color: #2d0353;
-`;
-const Image17 = styled.img`
-  width: 182.69px;
-  height: 147.28px;
-`;
 const Paragraph = styled.div`
-  width: 655px;
+ 
   font-size: 18px;
   font-family: Product Sans Black;
   line-height: 17.46px;
   color: #2d0353;
   margin: 0px 0px 31px 63px;
+  font-weight: bold; 
   @media ${devices.tablet} {
-    font-size: 13px;
+    margin: 0px 0px 31px 8px;
   }
 `;
-const Text14 = styled.div`
-  width: 43.47px;
-  font-size: 12px;
+
+const Paragraphticket = styled.div`
+ 
+  font-size: 27px;
   font-family: Product Sans Black;
-  line-height: 18.18px;
-  color: #219653;
-  align-self: flex-start;
-  margin: 0px 0px 0px 0.47px;
+  line-height: 17.46px;
+  color: #2d0353;
+  font-weight: bold; 
+  padding-bottom:10px; 
+  @media ${devices.tablet} {
+    font-size: 18px; 
+  }
 `;
+
 const Text17 = styled.div`
-  width: 45.82px;
+
   font-size: 12px;
   font-family: Product Sans Black;
   line-height: 18.18px;
   color: #219653;
+  display: flex;
+  flex-direction: row; 
+  gap: 30px; 
   align-self: flex-start;
   margin: 0px 0px 0px 1.17px;
+
 `;
 const FlexRow14 = styled.div`
   align-self: stretch;
@@ -286,21 +480,10 @@ const FlexRow14 = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0px 100px 0px 70px;
-  //   @media ${devices.tablet} {
-  //     display: flex;
-  //    flex-direction: column;
-  //    align-self: stretch;
-  //    align-items: center;
-  //   }
+  
 `;
 
-const Text18 = styled.div`
-  font-size: 24px;
-  font-family: Product Sans Medium;
-  line-height: 23.28px;
-  color: #2d0353;
-  align-self: flex-start;
-`;
+
 
 
 

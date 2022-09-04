@@ -16,9 +16,9 @@ const CGPACalculatorinputCom = () => {
         </div>
      <div class="col-span-4 bg-gray-100"> 
      <Text1>Course unit</Text1>
-     <div className="box  pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
-    <option selected>4 </option> 
+     <div className=" reducesize  pl-2 py-2">
+   <select className='' >
+    <option selected>4 </option>  
     <option>3</option>
     <option>2</option> 
     <option>1</option>
@@ -31,8 +31,8 @@ const CGPACalculatorinputCom = () => {
      <div class="col-span-4">
      <Text1> Projected grade</Text1>
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize pl-2 py-2">
+   <select className='' >
     <option selected>A </option> 
     <option>B</option>
     <option>C</option>
@@ -43,7 +43,7 @@ const CGPACalculatorinputCom = () => {
     </div> 
 
         </div>
-   </div>
+   </div> 
   </div>
     </div>
 
@@ -56,8 +56,8 @@ const CGPACalculatorinputCom = () => {
         </div>
      <div class="col-span-4 bg-gray-100"> 
      <Text1>Course unit</Text1>
-     <div className="box  pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize  pl-2 py-2">
+   <select className='' >
     <option selected>4 </option> 
     <option>3</option>
     <option>2</option> 
@@ -71,8 +71,8 @@ const CGPACalculatorinputCom = () => {
      <div class="col-span-4">
      <Text1> Projected grade</Text1>
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize pl-2 py-2">
+   <select className='' >
     <option selected>A </option> 
     <option>B</option>
     <option>C</option>
@@ -96,8 +96,8 @@ const CGPACalculatorinputCom = () => {
         </div>
      <div class="col-span-4 bg-gray-100"> 
      <Text1>Course unit</Text1>
-     <div className="box  pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize  pl-2 py-2">
+   <select className='' >
     <option selected>4 </option> 
     <option>3</option>
     <option>2</option> 
@@ -111,8 +111,8 @@ const CGPACalculatorinputCom = () => {
      <div class="col-span-4">
      <Text1> Projected grade</Text1>
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize pl-2 py-2">
+   <select className='' >
     <option selected>A </option> 
     <option>B</option>
     <option>C</option>
@@ -136,8 +136,8 @@ const CGPACalculatorinputCom = () => {
         </div>
      <div class="col-span-4 bg-gray-100"> 
      <Text1>Course unit</Text1>
-     <div className="box  pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize pl-2 py-2"> 
+   <select className='' >
     <option selected>4 </option> 
     <option>3</option>
     <option>2</option> 
@@ -151,8 +151,8 @@ const CGPACalculatorinputCom = () => {
      <div class="col-span-4">
      <Text1> Projected grade</Text1>
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className=" reducesize pl-2 py-2">
+   <select className='' >
     <option selected>A </option> 
     <option>B</option>
     <option>C</option>
@@ -163,16 +163,16 @@ const CGPACalculatorinputCom = () => {
     </div> 
 
         </div>
-   </div>
+   </div> 
   </div> 
     </div>
-
+ 
     
     <div class='justify'> 
      <RectangleRoot>
       <p className='text-white pl-8  '>Calculate CGPA</p> 
     </RectangleRoot>
-     </div>
+     </div> 
 
 
 
@@ -194,7 +194,7 @@ const sizes = {
   export const devices = {
     mobileS: `(min-width: ${sizes.mobileS})`,
     mobileM: `(min-width: ${sizes.mobileM})`,
-    mobileL: `(min-width: ${sizes.mobileL})`,
+    mobileL: `(max-width: ${sizes.mobileL})`,
     tablet: `(max-width: ${sizes.tablet})`,
     laptop: `(min-width: ${sizes.laptop})`,
     laptopL: `(min-width: ${sizes.laptopL})`,
@@ -221,10 +221,19 @@ const WhiteText = styled.div`
   border-width: 0.5px;
   margin-top: 10px; 
   margin-left: 10px;
-  text-align: center; 
+   
 
   @media ${devices.tablet} {
     width: 120px;    
+  } 
+
+  @media ${devices.mobileL} {
+    width: 60px;    
+    height: 60px;
+    margin-top: 2px; 
+    text-align: left;
+    margin-left: 10px; 
+    padding: 10px 17px;
   } 
 
 `;
@@ -237,7 +246,7 @@ const Text1 = styled.div`
   color: #787878;
   margin: 0px 250px 0px 0px;
   margin-left: 8px;
-  background-color: #ffffff;
+  
 `;
 
 const RectangleRoot = styled.div`

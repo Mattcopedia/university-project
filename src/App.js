@@ -40,6 +40,12 @@ import CGPACalculatorinput from 'components/CGPAComponent/CGPACalculatorInput';
 import CGPAGoalSetterInput from 'components/CGPAComponent/CGPAGoalSetterInput';
 import CGPAForecasterInput from 'components/CGPAComponent/CGPAForecasterInput';
 import UploadDoc from 'components/DocumentComponents/UploadDoc';
+import Maps from 'components/Maps';
+import SignUpTest from 'auth/SignUptest';
+import Logintest from 'auth/Logintest';
+import LoginHomePageTest from 'auth/LoginHomePageTest';
+// import { PrivateRoute } from './auth/PrivateRoute';
+
 
 WebFont.load({
     google: {
@@ -49,20 +55,30 @@ WebFont.load({
 
 function App() { 
 
+   
 
     return ( 
         <>     
 
+    
           
-          <Route exact path="/login" component={Login} />  
-          <Route exact path="/signup" component={SignupNow} />  
+         <Route exact path="/login" component={Login} /> 
+         <Route exact path="/logintest" component={Logintest} />   
+         <Route exact path="/signup" component={SignupNow} />  
+         <Route exact path="/signuptest" component={SignUpTest} />  
+         <Route exact path="/homepagetest" component={LoginHomePageTest} />  
+        
+
           <Route exact path="/createpassword" component={CreateLoginPassword} />   
           <Route exact path="/createaccount" component={CreateAccountS} />    
          
         <div className="md:ml-64 white "> 
         
         <Switch>
-            <Route exact path="/" component={Dashboard} />
+        {/* <PrivateRoute path="/" exact>
+                    <Dashboard />
+                    </PrivateRoute> */} 
+         <Route exact path="/" component={Dashboard} /> 
             <Route exact path="/document" component={Document} />
             <Route exact path="/gpatool" component={GpaTool} />
             <Route exact path="/printout" component={PrintOut} />
@@ -91,7 +107,9 @@ function App() {
             <Route exact path="/cgpa-cal-input" component={CGPACalculatorinput} />  
             <Route exact path="/cgpa-goalsetter-input" component={CGPAGoalSetterInput} /> 
             <Route exact path="/cgpa-forecaster-input" component={CGPAForecasterInput} /> 
-            <Route exact path="/upload-doc" component={UploadDoc} />  
+            <Route exact path="/upload-doc" component={UploadDoc} />     
+            <Route exact path="/loadmaps" component={Maps} />  
+            
            
             
             

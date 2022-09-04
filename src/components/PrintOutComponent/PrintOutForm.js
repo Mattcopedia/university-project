@@ -27,7 +27,7 @@ const PrintOutForm = () => {
 
 
 
-    <div className='bg-gray-100 mx-10 my-16 px-3'> 
+    <div className='bg-gray-100 py-5 md:mx-10 my-16 md:px-3'> 
 
        <div>
        <FlexColumn1>
@@ -39,17 +39,18 @@ const PrintOutForm = () => {
 
 
        <div>
-       <div class="grid grid-cols-5 py-4 bg-gray-100">
+       <div class="grid grid-cols-5 py-4 mx-2 bg-gray-100">
        <div class="bg-gray-100 col-span-4"> 
        <FlexColumn2>
             <FlexRow2 gap={`27px`}>
               <Text3 alignSelf={`inherit`}>Matric Number:</Text3>
               <Text3 alignSelf={`flex-end`}>STA/20/7009</Text3>
             </FlexRow2>
-            <FlexRow2 gap={`57px`}>
+            {/* 57 */}
+            <FlexRow3>
               <Text3 alignSelf={`inherit`}>Full Name:</Text3>
-              <Text3 alignSelf={`inherit`}>Ayomide Akinyemi</Text3>
-            </FlexRow2>
+              <Text3 alignSelf={`flex-end`}>Ayomide <br className="responsivemodal"></br>    Akinyemi</Text3> 
+            </FlexRow3>
             <FlexRow2 gap={`49px`}>
               <Text3 alignSelf={`inherit`}>Department:</Text3>
               <Text3 alignSelf={`inherit`}>Engineering</Text3>
@@ -64,7 +65,7 @@ const PrintOutForm = () => {
             </FlexRow2>
             <FlexRow2 gap={'65px'}>
               <Text3 alignSelf={`inherit`}>Semester:</Text3>
-              <Text3 alignSelf={`inherit`}>Second semester 2020-2021</Text3>
+              <Text3 alignSelf={`inherit`}>Second semester <br className="responsivemodal"></br>  2020-2021</Text3>
             </FlexRow2>
           </FlexColumn2> 
        </div>
@@ -78,84 +79,86 @@ const PrintOutForm = () => {
     </div> 
        </div>
        
-         <div className=' bg-white drop-shadow-md mx-4 pb-3 pr-3'>
+         <div className=' bg-white drop-shadow-md mx-3 pb-3  pr-3'>
        <div className='mx-auto pt-3'>
        <Text15>List of Registered</Text15>
        </div>
        {/* start here */}
-       <div className=''>
+       <div style={{overflowX: "auto"}} className=''>
        <table className='printform mx-auto my-10' style={{width:""}}>  
      <tr style={{height:"40px", backgroundColor: "#e5e5e5"}}>
-         <th style={{width:"60px"}}>S/N</th>
-         <th style={{width:"100px"}}>Course Code</th>
-         <th colspan="5"style={{width:"100px"}}><span>Course Title</span></th>
+         <th style={{width:"60px"}}><TextX>S/N</TextX></th>
+         <th style={{width:"100px"}}><TextX>Course Code</TextX></th>
+         <th colspan="5"style={{width:"100px"}}><TextX>Course Title</TextX></th>
          <th></th>
          
-          <th  style={{width:"90px"}}>Unit</th> 
+          <th  style={{width:"90px"}}><TextX>Unit</TextX></th> 
            
          
      </tr> 
      <tr style={{height:"70px"}}>  
-         <td >1</td> 
-         <td>Course Code</td>
-         <td colspan="5" style={{paddingLeft:"10px"}}>Introduction to Statistics and Maths</td>
+         <td ><label className="tabelinput" for="firstcourse">1</label></td> 
+         <td><label className="tabelinput" for="firstcourse">Course Code</label></td>
+         <td colspan="5" style={{paddingLeft:"10px"}}><label className="tabelinput" for="firstcourse">Introduction to Statistics and Maths</label></td>
          <td style={{width:"90px"}}></td> 
         
-         <td style={{width:"90px"}}>4</td>
+         <td style={{width:"90px"}}><label className="tabelinput" for="firstcourse">4</label></td>
      </tr>
      <tr className='bg-gray-100' style={{height:"70px"}}> 
-         <td> 2</td>
-         <td>Course Code</td>
-         <td colspan="5" style={{paddingLeft:"10px"}}>Introduction to Statistics and Maths</td>
-         <td></td>
-         
-         <td>4</td>
+     <td ><label className="tabelinput" for="firstcourse">2</label></td> 
+         <td><label className="tabelinput" for="firstcourse">Course Code</label></td>
+         <td colspan="5" style={{paddingLeft:"10px"}}><label className="tabelinput" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td style={{width:"90px"}}></td> 
+        
+         <td style={{width:"90px"}}><label className="tabelinput" for="firstcourse">4</label></td>
      </tr>
      <tr style={{height:"70px"}}> 
-         <td >3</td>
-         <td >Course Code</td>
-         <td colspan="5" style={{paddingLeft:"10px"}}>Introduction to Statistics and Maths</td>
-         <td></td>
-         
-         <td>4</td>
+     <td ><label className="tabelinput" for="firstcourse">3</label></td> 
+         <td><label className="tabelinput" for="firstcourse">Course Code</label></td>
+         <td colspan="5" style={{paddingLeft:"10px"}}><label className="tabelinput" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td style={{width:"90px"}}></td> 
+        
+         <td style={{width:"90px"}}><label className="tabelinput" for="firstcourse">4</label></td>
      </tr>
      <tr className='bg-gray-100' style={{height:"70px"}}> 
-         <td >4</td>
-         <td>Course Code</td>
-         <td colspan="5" style={{paddingLeft:"10px"}}>Introduction to Statistics and Maths</td>
-         <td></td>
-      
-         <td>4</td>
+     <td ><label className="tabelinput" for="firstcourse">4</label></td> 
+         <td><label className="tabelinput" for="firstcourse">Course Code</label></td>
+         <td colspan="5" style={{paddingLeft:"10px"}}><label className="tabelinput" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td style={{width:"90px"}}></td> 
+        
+         <td style={{width:"90px"}}><label className="tabelinput" for="firstcourse">4</label></td>
      </tr>
      <tr style={{height:"70px"}}> 
-         <td>5</td>
-         <td>Course Code</td>
-         <td colspan="5" style={{paddingLeft:"10px"}}>Introduction to Statistics and Maths</td>
-         <td></td>
-         
-         <td>4</td> 
+     <td ><label className="tabelinput" for="firstcourse">5</label></td> 
+         <td><label className="tabelinput" for="firstcourse">Course Code</label></td>
+         <td colspan="5" style={{paddingLeft:"10px"}}><label className="tabelinput" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td style={{width:"90px"}}></td> 
+        
+         <td style={{width:"90px"}}><label className="tabelinput" for="firstcourse">4</label></td>
      </tr>
 
-     <tr className='bg-gray-100' style={{height:"70px"}}> 
-         <td >6</td>
-         <td>Course Code</td>
-         <td colspan="5" style={{paddingLeft:"10px"}}>Introduction to Statistics and Maths</td>
-         <td></td>
-         
-         <td>4</td> 
+     <tr style={{height:"70px"}}> 
+     <td ><label className="tabelinput" for="firstcourse">6</label></td> 
+         <td><label className="tabelinput" for="firstcourse">Course Code</label></td>
+         <td colspan="5" style={{paddingLeft:"10px"}}><label className="tabelinput" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td style={{width:"90px"}}></td> 
+        
+         <td style={{width:"90px"}}><label className="tabelinput" for="firstcourse">4</label></td>
      </tr>
+
+    
 
      <tr style={{height:"70px",}}> 
-         <td colspan="2" >Total Point </td>
+         <td colspan="2" ><TotalRoot>Total </TotalRoot> </td>
          <td></td>
          <td></td>
          <td></td>
          <td></td>
          <td></td>
          <td></td>
-         <td>24</td>
+         <td><TotalRoot>24</TotalRoot></td> 
          
-     </tr>
+     </tr> 
 
     
      
@@ -170,7 +173,7 @@ const PrintOutForm = () => {
          {/* notice here */}
          <div>
          <div class="grid grid-cols-5 py-4 mx-4  ">
-       <div class=" mx-auto   col-span-2"> 
+       <div class=" mx-auto  col-span-2"> 
        
        <span>
        <Text22> Olabode Felix</Text22>
@@ -190,11 +193,11 @@ const PrintOutForm = () => {
 
 
 
-       <div className='justify mt-7'> 
+       <div className='justifyprint mt-7'> 
        <WhiteFlexRowRoot>
       <FlexRowy>
        
-        <Texty>Send to email</Texty>
+        <Textz>Send to email</Textz>
       </FlexRowy> 
     </WhiteFlexRowRoot> 
 
@@ -206,7 +209,7 @@ const PrintOutForm = () => {
     </WhiteFlexRowRoot>  
 
      <RectangleRoot>
-      <p className='text-white cursor-pointer pt-1 text-center'>Print</p>   
+      <p className='text-white cursor-pointer pt-1 px-4 text-center'>Print</p>   
     </RectangleRoot>
 
     
@@ -227,6 +230,42 @@ const PrintOutForm = () => {
   )
 }
 
+const sizes = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+export const devices = {
+  mobileS: `(min-width: ${sizes.mobileS})`,
+  mobileM: `(min-width: ${sizes.mobileM})`,
+  mobileL: `(max-width: ${sizes.mobileL})`,
+  tablet: `(max-width: ${sizes.tablet})`,
+  laptop: `(min-width: ${sizes.laptop})`,
+  laptopL: `(min-width: ${sizes.laptopL})`,
+  desktop: `(min-width: ${sizes.desktop})`,
+};
+
+const TextX = styled.div`
+mix-blend-mode: normal;
+font-size: 14px;
+font-family: Product Sans Medium;
+line-height: 21.21px;
+color: #505050;
+
+   @media ${devices.mobileL} {  
+    
+    font-size: 12.5px;
+  } 
+
+  
+`;
+
+
+
 const FlexColumnRoot = styled.div`
   display: flex;
   flex-direction: column;
@@ -241,6 +280,11 @@ const Text1 = styled.div`
   color: #df8909;
   align-self: flex-start;
   padding-left: 91px;
+
+  @media ${devices.mobileL} { 
+    padding-left: 33px;
+  } 
+
 `;
 const Paragraph = styled.div`
   font-size: 36px;
@@ -310,6 +354,20 @@ const FlexRow2 = styled.div`
   gap: ${(props) => props.gap};
 `;
 
+const FlexRow3 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+
+  @media ${devices.mobileL} { 
+    gap: 56px;
+  } 
+`;
+
+
+
 const Text15 = styled.div`
   font-size: 22px;
   font-family: Product Sans Medium;
@@ -333,6 +391,9 @@ const WhiteFlexRowRoot = styled.div`
   padding: 12px 0px;
   margin-left: 20px; 
   cursor: pointer;
+
+ 
+
 `;
 const FlexRowy = styled.div`
   display: flex;
@@ -340,6 +401,11 @@ const FlexRowy = styled.div`
   gap: 11px;
   justify-content: center;
   align-items: center;
+
+  @media ${devices.mobileL} { 
+    gap: 2px;
+  } 
+
 `;
 const Image2 = styled.img`
   width: 16px;
@@ -347,13 +413,34 @@ const Image2 = styled.img`
   align-self: flex-end;
   margin: 0px 0px 3px 0px;
 `;
+
 const Texty = styled.div`
   font-size: 14px;
   font-family: Roboto;
   line-height: 21px;
   color: #787878;
   cursor: pointer;
+
+  @media ${devices.mobileL} { 
+    width: 72px; 
+  } 
+
 `;
+
+const Textz = styled.div`
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #787878;
+  cursor: pointer;
+
+  @media ${devices.mobileL} { 
+    width: 72px; 
+    padding-left:10px;
+  } 
+
+`;
+
 
 const RectangleRoot = styled.div`
   border-top-left-radius: 6px;
@@ -378,6 +465,13 @@ const Text22 = styled.div`
   margin-left: 30px;
 `;
 
+const TotalRoot = styled.div`
+  mix-blend-mode: normal;
+  font-size: 16px;
+  font-family: Product Sans Medium;
+  line-height: 15.52px;
+  color: #df8909;
+`;
 
 
 

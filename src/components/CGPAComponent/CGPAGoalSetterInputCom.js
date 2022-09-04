@@ -13,7 +13,7 @@ const CGPAGoalSetterinputCom = () => {
    <div class="max-w-7xl mx-auto grid grid-cols-12 bg-gray-100">
      <div class="col-span-4">
      <Text1>S/N</Text1>
-     <p className='pl-3 pt-8 md:pt-4'>1</p> 
+     <p className='pl-3 pt-7 md:pt-3'>1</p> 
             
         </div>
      <div class="col-span-4 bg-gray-100"> 
@@ -24,8 +24,8 @@ const CGPAGoalSetterinputCom = () => {
      <div class="col-span-4">
      <Text1> Course unit</Text1>
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className="reducesize pl-2 py-2">
+   <select className='' >
     <option selected>1 </option> 
     <option>2</option>
     <option>3</option>
@@ -52,7 +52,7 @@ const CGPAGoalSetterinputCom = () => {
    <div class="max-w-7xl mx-auto grid grid-cols-12 bg-gray-100">
      <div class="col-span-4">
      
-            <p className='pl-3 pt-8 md:pt-4'>2</p>
+            <p className='pl-3 pt-7 md:pt-3'>2</p>
         </div>
      <div class="col-span-4 bg-gray-100"> 
     
@@ -62,8 +62,8 @@ const CGPAGoalSetterinputCom = () => {
      <div class="col-span-4">
  
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className="reducesize pl-2 py-2">
+   <select className='' >
     <option selected>1 </option> 
     <option>2</option>
     <option>3</option>
@@ -83,7 +83,7 @@ const CGPAGoalSetterinputCom = () => {
    <div class="max-w-7xl mx-auto grid grid-cols-12 bg-gray-100">
      <div class="col-span-4">
     
-            <p className='pl-3 pt-8 md:pt-4'>3</p>
+            <p className='pl-3 pt-7 md:pt-3'>3</p>
         </div>
      <div class="col-span-4 bg-gray-100"> 
    
@@ -93,8 +93,8 @@ const CGPAGoalSetterinputCom = () => {
      <div class="col-span-4">
      
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className="reducesize pl-2 py-2">
+   <select className=''>
     <option selected>1 </option> 
     <option>2</option>
     <option>3</option>
@@ -117,7 +117,7 @@ const CGPAGoalSetterinputCom = () => {
    
      <SelectAcademicYearRoot>Choose the minium CGPA you want to attain </SelectAcademicYearRoot>  
         </div>
-     <div class="col-span-3 bg-gray-100"> 
+     <div class="col-span-3 bg-gray-100">  
  
      
         </div>
@@ -125,8 +125,8 @@ const CGPAGoalSetterinputCom = () => {
      <div class="col-span-4">
      
 
-     <div className="box pl-2 py-2">
-   <select className='reducesize' style={{width: "300px"}}>
+     <div className="reducesize pl-2 py-2">
+   <select className='' >
     <option selected>1 </option> 
     <option>2</option>
     <option>3</option>
@@ -153,7 +153,7 @@ const CGPAGoalSetterinputCom = () => {
     
     <div class='justify'> 
      <RectangleRoot>
-      <p className='text-white pl-8  '>Calculate </p> 
+      <p className='text-white pl-11 md:pl-16  '>Calculate </p> 
     </RectangleRoot>
      </div>
 
@@ -165,6 +165,26 @@ const CGPAGoalSetterinputCom = () => {
   )
 }
 
+const sizes = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+export const devices = {
+  mobileS: `(min-width: ${sizes.mobileS})`,
+  mobileM: `(min-width: ${sizes.mobileM})`,
+  mobileL: `(max-width: ${sizes.mobileL})`,
+  tablet: `(max-width: ${sizes.tablet})`,
+  laptop: `(min-width: ${sizes.laptop})`,
+  laptopL: `(min-width: ${sizes.laptopL})`, 
+  desktop: `(min-width: ${sizes.desktop})`,
+};
+
+
 const SelectAcademicYearRoot = styled.div`
   font-size: 16px;
   font-family: Product Sans Medium;
@@ -173,27 +193,17 @@ const SelectAcademicYearRoot = styled.div`
   padding-bottom: 40px; 
   padding-left: 32px;
   padding-top: 20px;
-`;
 
 
-const sizes = {
-    mobileS: "320px",
-    mobileM: "375px",
-    mobileL: "425px",
-    tablet: "768px",
-    laptop: "1024px",
-    laptopL: "1440px",
-    desktop: "2560px",
-  };
-  export const devices = {
-    mobileS: `(min-width: ${sizes.mobileS})`,
-    mobileM: `(min-width: ${sizes.mobileM})`,
-    mobileL: `(min-width: ${sizes.mobileL})`,
-    tablet: `(max-width: ${sizes.tablet})`,
-    laptop: `(min-width: ${sizes.laptop})`,
-    laptopL: `(min-width: ${sizes.laptopL})`,
-    desktop: `(min-width: ${sizes.desktop})`,
-  };
+  @media ${devices.tablet} {
+    padding-bottom: 50px;    
+  } 
+
+  @media ${devices.mobileL} { 
+    padding-top: 8px;
+  } 
+
+`; 
 
 
 const WhiteText = styled.div`
@@ -221,6 +231,16 @@ const WhiteText = styled.div`
     width: 120px;    
   } 
 
+  @media ${devices.mobileL} {
+    width: 60px;    
+    height: 60px;
+    margin-top: 2px; 
+    text-align: left;
+    margin-left: 10px; 
+    padding: 10px 17px;
+  } 
+  
+
 `;
 
 const Text1 = styled.div`
@@ -246,6 +266,11 @@ const RectangleRoot = styled.div`
   padding-bottom: 12px;
   margin-top: 20px;
  
+  @media ${devices.mobileL} { 
+    width: 160px;
+    height: 50px;
+  } 
+
 `;
 
 

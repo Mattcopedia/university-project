@@ -1,11 +1,11 @@
-import Sidebar from "components/Sidebar";
+import CGPACalculator from "components/CGPAComponent/CGPACalculator";
 
 
 export default function Dashboard() {
     return (
         <>
-         <Sidebar /> 
-         <p>Boy is cool</p> 
+       
+        <CGPACalculator />
         </>
     );
 }

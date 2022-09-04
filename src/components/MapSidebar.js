@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from "styled-components";  
-import AdminNavbar from './AdminNavbar';
+import MapsAdminNavbar from "./MapsAdminNavbar" 
 import { Link, NavLink } from "react-router-dom";  
 import Button from '@material-tailwind/react/Button';
 import Icon from '@material-tailwind/react/Icon';  
@@ -8,14 +8,12 @@ import "./br.css"
 
  
  
-export default function Sidebar() {
+export default function MapSidebar() { 
 
     const [showSidebar, setShowSidebar] = useState('-left-64');
     return (
         <>
-            <AdminNavbar
-                showSidebar={showSidebar} 
-                setShowSidebar={setShowSidebar}  
+            <MapsAdminNavbar
             />
             <div
                 className={` fixed   top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden  transition-all duration-300 bg-white`} >  

@@ -11,100 +11,100 @@ const PrintOutFormTable = () => {
        <br />
        <br />
 
-       <div className='bg-white ml-5 '> 
+       <div style={{overflowX: "auto"}} className='bg-white ml-5 '> 
      <table className='Youresult' style={{width:"100%"}} >    
      <tr style={{height:"40px", backgroundColor: "#e5e5e5"}}>
          <th style={{width:"60px"}}></th>
-         <th style={{width:"100px"}}>Course Code</th>
-         <th style={{width:"140px"}} >Department</th>
-         <th style={{width:"140px"}}>Course Title</th>
-         <th style={{paddingLeft:"0px", width:"90px"}}>Unit</th>
-         <th style={{width:"90px"}}>Status</th>
-         <th style={{width:"90px"}}>Semester</th> 
-         <th style={{width:"90px"}}>Level</th>  
+         <th style={{width:"100px"}}><TextX>Course Code</TextX></th>
+         <th style={{width:"100px"}} > <TextX>Department</TextX></th>
+         <th style={{width:"180px"}}><TextX>Course Title</TextX></th>
+         <th style={{paddingLeft:"0px", width:"90px"}}><TextX>Unit</TextX></th>
+         <th style={{width:"90px"}}><TextX>Status</TextX></th>
+         <th style={{width:"90px"}}><TextX>Semester</TextX></th> 
+         <th style={{width:"90px"}}><TextX>Level</TextX></th>  
          
      </tr>
 
      <tr style={{height:"70px"}}> 
          <td >  </td> 
-         <td><label for="firstcourse">STA 101</label></td>
-         <td ><label for="firstcourse">STA 101</label></td>
-         <td><label for="firstcourse">Introduction to Statistics and Maths</label></td>
-         <td><label for="firstcourse">4</label></td>
-         <td><label for="firstcourse">C</label></td>
-         <td><label for="firstcourse">First</label></td>
-         <td><label for="firstcourse">100</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td ><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">4</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">C</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">First</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">100</label></td>
      </tr>
 
-     <tr className='bg-gray-100' style={{height:"70px"}}> 
-         <td>  </td>
-         <td>STA 101</td>
-         <td >Statistics</td> 
-         <td>Introduction to Statistics and Maths</td>
-         <td>4</td>
-         <td>C</td>
-         <td>First</td>
-         <td>100</td>
+     <tr style={{height:"70px"}}> 
+         <td >  </td> 
+         <td><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td ><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">4</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">C</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">First</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">100</label></td>
      </tr>
      <tr style={{height:"70px"}}> 
-         <td ></td>
-         <td >STA 101</td>
-         <td >Statistics</td>
-         <td>Introduction to Statistics and Maths</td>
-         <td>4</td>
-         <td>C</td>
-         <td>First</td>
-         <td>100</td>
-     </tr>
-     <tr className='bg-gray-100' style={{height:"70px"}}> 
-         <td ></td>
-         <td>STA 101</td>
-         <td >Statistics</td>
-         <td>Introduction to Statistics and Maths</td>
-         <td>4</td>
-         <td>C</td>
-         <td>First</td>
-         <td>100</td>
+         <td >  </td> 
+         <td><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td ><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">4</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">C</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">First</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">100</label></td>
      </tr>
      <tr style={{height:"70px"}}> 
-         <td></td>
-         <td>STA 101</td>
-         <td >Statistics</td>
-         <td>Introduction to Statistics and Maths</td>
-         <td>4</td>
-         <td>C</td>
-         <td>First</td>
-         <td>100</td>
+         <td >  </td> 
+         <td><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td ><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">4</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">C</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">First</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">100</label></td>
+     </tr>
+     <tr style={{height:"70px"}}> 
+         <td >  </td> 
+         <td><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td ><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">4</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">C</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">First</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">100</label></td>
      </tr>
 
-     <tr className='bg-gray-100' style={{height:"70px"}}> 
-         <td ></td>
-         <td>STA 101</td>
-         <td>Statistics</td>
-         <td>Introduction to Statistics and Maths</td>
-         <td>4</td>
-         <td>C</td>
-         <td>First</td>
-         <td>100</td>
+     <tr style={{height:"70px"}}> 
+         <td >  </td> 
+         <td><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td ><label className="tabelinputleft" for="firstcourse">STA 101</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">Introduction to Statistics and Maths</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">4</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">C</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">First</label></td>
+         <td><label className="tabelinputleft" for="firstcourse">100</label></td>
      </tr>
 
      <tr style={{height:"70px",}}>  
-         <td colspan="1" >Total Point </td>
+         <td colspan="1" ><TotalRoot>Total Unit </TotalRoot> </td>
          <td></td>
          <td></td>
          <td></td>
-         <td>16</td>
+         <td><TotalRoot>16 </TotalRoot></td>
          <td></td>
          <td></td> 
          <td></td>  
      </tr>
 
      <tr style={{height:"70px",}}> 
-         <td >GPA </td> 
+         <td ><TotalRoot>GPA </TotalRoot> </td> 
          <td></td>
          <td></td>
          <td></td>
-         <td>3.0</td>
+         <td><TotalRoot>3.0 </TotalRoot></td>
          <td></td>
          <td></td> 
          <td></td>  
@@ -135,6 +135,47 @@ const PrintOutFormTable = () => {
     </div>
   )
 }
+const sizes = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+export const devices = {
+  mobileS: `(min-width: ${sizes.mobileS})`,
+  mobileM: `(min-width: ${sizes.mobileM})`,
+  mobileL: `(max-width: ${sizes.mobileL})`,
+  tablet: `(max-width: ${sizes.tablet})`,
+  laptop: `(min-width: ${sizes.laptop})`,
+  laptopL: `(min-width: ${sizes.laptopL})`,
+  desktop: `(min-width: ${sizes.desktop})`,
+};
+
+const TotalRoot = styled.div`
+mix-blend-mode: normal;
+font-size: 18px;
+font-family: Product Sans Medium;
+line-height: 17.46px;
+color: #219653; 
+`;
+
+const TextX = styled.div`
+mix-blend-mode: normal;
+font-size: 14px;
+font-family: Product Sans Medium;
+line-height: 21.21px;
+color: #505050;
+
+   @media ${devices.mobileL} {  
+    
+    font-size: 12.5px;
+  } 
+
+  
+`;
 
 const WhiteFlexRowRoot = styled.div`
   width: 180px;
