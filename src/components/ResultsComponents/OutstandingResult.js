@@ -27,7 +27,7 @@ const OutstandingResult = () => {
         </div>
         
 
-         <div className='bg-white ml-5 '> 
+         <div style={{overflowX: "auto"}}  className='bg-white ml-5 '> 
      <table className='Youresult' style={{width:""}}>  
      <tr style={{height:"40px", backgroundColor: "#e5e5e5"}}>
          <th style={{width:"60px"}}></th>

@@ -113,8 +113,8 @@ const sizes = {
 export const devices = {
   mobileS: `(min-width: ${sizes.mobileS})`,
   mobileM: `(min-width: ${sizes.mobileM})`,
-  mobileL: `(min-width: ${sizes.mobileL})`,
-  tablet: `(min-width: ${sizes.tablet})`,
+  mobileL: `(max-width: ${sizes.mobileL})`,
+  tablet: `(max-width: ${sizes.tablet})`,
   laptop: `(min-width: ${sizes.laptop})`,
   laptopL: `(min-width: ${sizes.laptopL})`,
   desktop: `(min-width: ${sizes.desktop})`,
@@ -156,6 +156,10 @@ const RootRoot = styled.div`
   align-items: flex-start;
   margin-left: 20px; 
 
+  @media ${devices.mobileL} { 
+    margin-left: 0px;  
+  }  
+
 `;
 const FlexRow = styled.div`
   align-self: stretch;
@@ -166,6 +170,10 @@ const FlexRow = styled.div`
   gap: 13px;    
   align-items: flex-start;
   margin-right: 8px;
+
+  @media ${devices.mobileL} {
+    margin-right: 160px;  
+  }  
 `; 
 const Text2 = styled.div`
   font-size: 14px;

@@ -50,7 +50,7 @@ export default function StudentHelpDesk() {
 
     <StudentRoot>
 
-      <div>
+      <div className="flex justify-center">
         <FlexColumn>
 
           <div>
@@ -445,6 +445,10 @@ const Paragraph = styled.div`
   font-weight: bold; 
   @media ${devices.tablet} {
     margin: 0px 0px 31px 8px;
+   
+  }
+  @media ${devices.mobileL} {
+    font-size: 12px;
   }
 `;
 

@@ -11,7 +11,7 @@ const Maps = () => {
  let [viewport, setViewport] = useState({
     latitude: 6.591947,
     longitude: 3.289574,
-    zoom: 14,
+    zoom: 11,
     height: window.innerHeight,
     width:  "80vw",    
     pitch: 50,
@@ -22,11 +22,9 @@ const Maps = () => {
   return (
     <>
 
-   
-    
-
        <div className='cool static'> 
-       <ReactMapGL  mapStyle="mapbox://styles/mapbox/streets-v9"  mapboxApiAccessToken={"pk.eyJ1Ijoib2ZlaW11biIsImEiOiJjbDdocDBia2cwZ2xuM3dzYWI2OGFyZmp1In0.rr7Z0vJJRAA6Wund5yDKdw "}
+       <ReactMapGL  mapStyle="mapbox://styles/mapbox/streets-v8" mapboxApiAccessToken= {"pk.eyJ1Ijoib2ZlaW11biIsImEiOiJjbDdocDBia2cwZ2xuM3dzYWI2OGFyZmp1In0.rr7Z0vJJRAA6Wund5yDKdw"} 
+       
        {...viewport}
        onViewportChange={(newView) => setViewport(newView)}  
       

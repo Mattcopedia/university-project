@@ -53,15 +53,15 @@ const PrintOutForm = () => {
             </FlexRow3>
             <FlexRow2 gap={`49px`}>
               <Text3 alignSelf={`inherit`}>Department:</Text3>
-              <Text3 alignSelf={`inherit`}>Engineering</Text3>
+              <Textak alignSelf={`inherit`}>Engineering</Textak>
             </FlexRow2>
             <FlexRow2 gap={`52px`}>
               <Text3 alignSelf={`inherit`}>Programme:</Text3>
-              <Text3 alignSelf={`inherit`}>Statistics</Text3>
+              <Textak alignSelf={`inherit`}>Statistics</Textak>
             </FlexRow2>
             <FlexRow2 gap={`87px`}>
               <Text3 alignSelf={`inherit`}>Level:</Text3>
-              <Text3 alignSelf={`inherit`}>100</Text3>
+              <Textaz alignSelf={`inherit`}>100</Textaz>
             </FlexRow2>
             <FlexRow2 gap={'65px'}>
               <Text3 alignSelf={`inherit`}>Semester:</Text3>
@@ -318,6 +318,26 @@ const Text3 = styled.div`
   line-height: 15.52px;
   color: #505050;
   align-self: ${(props) => props.alignSelf};
+`;
+
+const Textak = styled.div`
+  font-size: 16px;
+  font-family: Product Sans Medium;
+  line-height: 15.52px;
+  color: #505050;
+  align-self: ${(props) => props.alignSelf};
+
+
+ 
+`;
+const Textaz = styled.div`
+  font-size: 16px;
+  font-family: Product Sans Medium;
+  line-height: 15.52px;
+  color: #505050;
+  align-self: ${(props) => props.alignSelf};
+  
+  
 `;
 
 const FlexColumn1 = styled.div`
